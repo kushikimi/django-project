@@ -1,0 +1,23 @@
+
+{%extends 'base.html'%}
+
+
+{%block my_block%}
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="">Please enter your credentials below:</h1>
+    <br>
+    <br>
+    <form action="{%url 'app:user_login'%}" method="post">
+      <label for="username"></label>
+      <input type="text" name="fusername" placeholder="username">
+      <label for="password"></label>
+      <input type="password" name="fpassword" required placeholder="password">
+      <input type="submit"  value="Login">
+      {%csrf_token%}
+    </form>
+  </div>
+
+</div>
+
+{%endblock%}
